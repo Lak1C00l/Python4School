@@ -2,12 +2,12 @@ userName = input("Please enter your name: ");
 greeting = "Hello "+ userName;
 print(greeting);
 
-messasge = input("Please enter message to be manipulated")
-print(messasge.capitalize())
-print(messasge.upper())
-print(messasge.lower())
-print(messasge.swapcase())
-print(messasge.title())
+message = input("Please enter message to be manipulated")
+print(message.capitalize())
+print(message.upper())
+print(message.lower())
+print(message.swapcase())
+print(message.title())
 
 stripMessage = "                 THIS IS SOME TEXT WITH WHITESPACE        "
 print(stripMessage)
@@ -15,7 +15,7 @@ print(stripMessage.strip())
 print(stripMessage.lstrip())
 print(stripMessage.rstrip()) 
 
-# Finding a certain charachter or portion of string and changing it's value
+# Finding a certain character or portion of string and changing it's value
 findMessage = "Twas brilling and the slithy toad"
 print(findMessage.replace("toad","toave"))
 # Finding a certain charachter or portion of string 
