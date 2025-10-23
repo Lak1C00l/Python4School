@@ -8,41 +8,30 @@ print("Whoever picks up the last stick loses (the other player wins).")
 
 numberOfSticks = 7;
 computerMove = randint(1,3);
-userMove = input("Would you like to go second or first: ").lower
-while not(numberOfSticks == 0):
-    while userMove == 'first':
+userMove = input("Would you like to go second or first: ").lower()
+if userMove == 'second':
+    numberOfSticks -= 2
+print(f"Number of sticks left is: {numberOfSticks}")
+while numberOfSticks > 0:
         userSticks = int(input("How many sticks would you like to take between three between one? "))
-        if userSticks != 3 or userSticks != 2 or userSticks != 1:
-            userSticks = int(input("Choose BETWEEN three and one: "))
-        elif (numberOfSticks - userSticks) < 0 :
-            userSticks = int(input(f" Chose a number of sticks that is between {numberOfSticks} and 1 "))
+        if userSticks > 3 or userSticks < 1 or userSticks > numberOfSticks or userSticks == 0:
+            userSticks = int(input("Invalid number"))
         else:
-            numberOfSticks - userSticks
+            numberOfSticks -= userSticks
             print(f"Number of sticks left is: {numberOfSticks}")
+            if numberOfSticks - computerMove == 0:
+                print("Congradulations user you win!")
     
-        if (numberOfSticks - computerMove) < 0 :
-            randint(1,3)
-        else:
-            numberOfSticks -= computerMove
-            print(f"Number of sticks left is: {numberOfSticks}")
+        while (numberOfSticks - computerMove) < 0 :
+            computerMove = randint(1,3)
 
-    while userMove == 'second':
-        numberOfSticks -= 2
-        userSticks = int(input("How many sticks would you like to take between three between one? "))
-        if userSticks != 3 or userSticks != 2 or userSticks != 1:
-            userSticks = int(input("Choose BETWEEN three and one: "))
-        elif (numberOfSticks - userSticks) < 0 :
-            userSticks = int(input(f" Chose a number of sticks that is between {numberOfSticks} and 1 "))
-        else:
-            numberOfSticks - userSticks
-            print(f"Number of sticks left is: {numberOfSticks}")
+        numberOfSticks -= computerMove
+        print(f"Computer move was: {computerMove}")
+        print(f"Number of sticks left is: {numberOfSticks}")
+        if numberOfSticks - userSticks == 0:
+            print("HAHAHA you looosseee!!")
 
 
-        if (numberOfSticks - computerMove) < 0 :
-            randint(1,3)
-        else:
-            numberOfSticks -= computerMove
-            print(f"Number of sticks left is: {numberOfSticks}")
     
         
    
