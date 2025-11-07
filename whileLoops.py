@@ -20,7 +20,7 @@ while numberOfSticks > 0:
             numberOfSticks -= userSticks
             print(f"Number of sticks left is: {numberOfSticks}")
             if numberOfSticks - computerMove == 0:
-                print("Congradulations user you win!")
+                print("congratulations user you win!")
     
         while (numberOfSticks - computerMove) < 0 :
             computerMove = randint(1,3)
