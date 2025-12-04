@@ -8,7 +8,7 @@ backroundColor = 200,100,0
 screen = pygame.display.set_mode((width,height))
 
 #importing image
-flatCat = pygame.image.load("Ginger Exotic Shorthair Cat.jpg")
+flatCat = pygame.image.load("pygame/Ginger Exotic Shorthair Cat.jpg")
 
 #scaling and transforming image
 flatCat = pygame.transform.scale(flatCat, (50,50))
